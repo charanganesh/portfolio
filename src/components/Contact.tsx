@@ -2,15 +2,15 @@ import React from 'react';
 
 export const Contact: React.FC = () => {
     const sectionStyle: React.CSSProperties = {
-        padding: 'var(--section-padding)',
+        padding: window.innerWidth > 768 ? 'var(--section-padding)' : '60px 20px',
         maxWidth: 'var(--max-width)',
         margin: '0 auto',
     };
 
     const headingStyle: React.CSSProperties = {
-        fontSize: '56px',
+        fontSize: window.innerWidth > 768 ? '56px' : '36px',
         fontWeight: 700,
-        marginBottom: '48px',
+        marginBottom: window.innerWidth > 768 ? '48px' : '32px',
         textAlign: 'center',
         letterSpacing: '-0.015em',
     };
@@ -18,13 +18,13 @@ export const Contact: React.FC = () => {
     const contentStyle: React.CSSProperties = {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '32px',
+        gap: window.innerWidth > 768 ? '32px' : '20px',
         maxWidth: '800px',
         margin: '0 auto',
     };
 
     const cardStyle: React.CSSProperties = {
-        padding: '32px',
+        padding: window.innerWidth > 768 ? '32px' : '24px',
         backgroundColor: 'rgba(0, 0, 0, 0.02)',
         borderRadius: '18px',
         border: '1px solid rgba(0, 0, 0, 0.08)',
