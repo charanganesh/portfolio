@@ -95,15 +95,15 @@ export const Hero: React.FC = () => {
     const wordContainerStyle: React.CSSProperties = {
         position: 'relative',
         display: 'inline-block',
-        width: window.innerWidth > 768 ? '150px' : '120px', // Fixed width to prevent shifts
-        minHeight: window.innerWidth > 768 ? '58px' : '40px',
+        width: window.innerWidth > 768 ? '150px' : '120px',
+        height: window.innerWidth > 768 ? '58px' : '40px',
         verticalAlign: 'baseline',
     };
 
     const animatedWordStyle = (isActive: boolean, isPrev: boolean): React.CSSProperties => ({
         position: 'absolute',
         left: 0,
-        top: 0,
+        bottom: 0,
         whiteSpace: 'nowrap',
         color: 'var(--color-accent)',
         fontWeight: 700,
